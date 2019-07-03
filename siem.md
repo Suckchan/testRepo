@@ -41,6 +41,12 @@ SIEM은 빅데이터 수준의 장기간 심층분석과 Indexing 기반
 
 DevOps는 개발(Development)과 운영(Operation)의 합성어
 
+status=78 error 해결법
+
+bootstrap.system_call_filter: false
+
+elasticsearch.yml 에 추가
+
 #### DevOps의 이점
 
 속도 - 배포까지의 빠른 작업속도를 효율적으로 제공하기 때문에 시장 번화에 빠르게 대처하고 비즈니스 성과를 창출 가능.
@@ -76,7 +82,28 @@ DevOps는 개발(Development)과 운영(Operation)의 합성어
 
 모니터링 : ELK 스택
 
+#### Snort
+
+Suricata 나오기 전까지는 오픈소스 IDS/IPS의 시장에서 최강자
+
+프토로콜 검색과 컨텐츠 분석, 다양한 전처리 프로그램을 통해 Snort는 수많은 웜과 취약점 익스플로잇 시도를 탐지해내며, 수많은 종류의 공격과 버퍼오버플로우, 비노출 포트 스캔, CGI 공격 등을 탐지하는데 뛰어난 효과를 발휘.
+
+단점은 단일 스레드 방식
+
+1. Sniffer Mode - 출력을 화면에 지속적으로 쏟아 내며, 이 모드는 데이터를 보존하기가 힘들다. 작은 규모의 네트와크에서 사용하는 편이 좋다.
+2. Packet Looger Mode - 출력은 지정한 장치에 기록되며, 차후에 모니터링 가능.
+3. Network IDS/IPS Mode - 징후를 탐지하며, 설정에 따라 공격에 적극적으로 반응 하기도함.
+
+OISF(Open information Security Foundation) 이라는 단체에서 Suricata를 발표 함
+
+Suricata의 장점은 멀티 스레드와 멀티 코어를 지원
+
+Snort에서 쓰던 보안 룰을 그대로 가져와서 쓸수 있고 Snort의 거의 모든기능 제공함.
+
+
 
 # 해야될것
 ---
 ELK 구축
+JAVA 공부
+Python 공부
